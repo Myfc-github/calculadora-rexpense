@@ -1,0 +1,258 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Negociações</title>
+<style>
+    .calculadora{
+        height: 700px;
+        background: #3BB3A4;
+        padding: 60px;
+    }
+</style>
+<style>
+    .displaynone{
+        display: none !important;
+    }
+    .containlabelCalculadora{
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 12px;
+    }
+    .numeroPerguntaCalculadora{
+        margin-bottom: 0px;
+        margin-left: -44px;
+        padding-right: 18px;
+        color: #96f7d2;
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .perguntaCalculadora{
+        margin-bottom: 0px;
+        color: #fff;
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    .respostaWrapper{
+        border-bottom: 1px solid #fff;
+        max-width: 100%;
+        margin-bottom: 27px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .resposta{
+        margin-bottom: 0px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #3bb3a4;
+        background-color: #3bb3a4;
+        font-size: 30px;
+        line-height: 32px;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.28);
+    }
+    .resposta::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: rgba(255, 255, 255, 0.28);
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .resposta:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: rgba(255, 255, 255, 0.28);
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .resposta::-ms-input-placeholder { /* Microsoft Edge */
+        color: rgba(255, 255, 255, 0.28);
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .resposta::-webkit-outer-spin-button, .resposta::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .resposta[type=number] { /* Firefox */
+        -moz-appearance: textfield;
+    }
+    input[type="time"]::-webkit-calendar-picker-indicator {
+        background: none;
+    }
+    .inputComplementHora, .inputComplementReais{
+        font-size: 30px;
+        line-height: 32px;
+        color: rgba(255, 255, 255, 0.28);
+    }
+    .inputComplementHora{
+        margin: 0 10px;
+    }
+    .inputComplementReais{
+        margin-right: 10px;
+    }
+    .submitButtonCalculadora{
+        border-radius: 6px;
+        background-color: #fff;
+        color: #3bb3a4;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+        padding: 15px 10px;
+    }
+</style>
+<style>
+    .h3Resultado{
+        margin-bottom: 69px;
+        font-size: 30px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #fff;
+        align-items: center;
+        text-align: center;
+    }
+    .resultadoWrapper{
+        display: -webkit-inline-box;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+    }
+    .resultadoContain{
+        margin: 10px;
+    }
+    .h2Resultado{
+        font-size: 30px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #fff;
+    }
+</style>
+    </head>
+    <body>
+        <div class="calculadora">
+            <div id="calculadoraApp">
+                <div id="introCalculadora">
+                    <h4>Calculadora de ROI</h4>
+                    <p>Simule o retorno do seu investimento.</p>
+                    <button id="startCalculadora">Iniciar</button>
+                </div>
+                <div id="formCalculadora1" class="displaynone">
+                    <div id="labelCalculadora">
+                        <div id="containlabelCalculadora" class="containlabelCalculadora">
+                            <span class="numeroPerguntaCalculadora">1.</span>
+                            <span class="perguntaCalculadora">Quantas pessoas na sua empresa enviam relatórios de despesas por mês?</span>
+                        </div>
+                    </div>
+                    <form id = "pergunta1">
+                        <div class="respostaWrapper">
+                            <input id="resposta1" class="resposta" placeholder="Número de pessoas"  type="number" min="1" step="1" autofocus>
+                        </div>
+                        <button class="submitButtonCalculadora" type="submit" data-botao1>OK</button>
+                    </form>
+                    <form id = "pergunta2" class="displaynone">
+                        <div class="respostaWrapper">
+                            <input id="resposta2h" class="resposta" placeholder="HH" maxlength="3">
+                            <span class="inputComplementHora">:</span>
+                            <input id="resposta2m" class="resposta" placeholder="MM" maxlength="2">
+                        </div>
+                        <button class="submitButtonCalculadora" type="submit" data-botao2>OK</button>
+                    </form>
+                    <form id = "pergunta3" class="displaynone">
+                        <div class="respostaWrapper">
+                            <span class="inputComplementReais">R$</span>
+                            <input id="resposta3" class="resposta" placeholder="99,99" type="number" min="0.01" step="0.01" value=".00">
+                        </div>
+                        <button class="submitButtonCalculadora" type="submit" data-botao3>OK</button>
+                    </form>
+                    <form id = "pergunta4" class="displaynone">
+                        <div class="respostaWrapper">
+                            <span class="inputComplementReais">R$</span>
+                            <input id="resposta4" class="resposta" placeholder="99,99" type="number" min="0.01" step="0.01" value=".00">
+                        </div>
+                        <button class="submitButtonCalculadora" type="submit" data-botao4>OK</button>
+                    </form>
+                    <form id = "pergunta5" class="displaynone">
+                        <div class="respostaWrapper">
+                            <input id="resposta5h" class="resposta" placeholder="HH">
+                            <span class="inputComplementHora"> : </span>
+                            <input id="resposta5m" class="resposta" placeholder="MM">
+                        </div>
+                        <button class="submitButtonCalculadora" type="submit" data-botao5>OK</button>
+                    </form>
+                </div>
+                <div id="resultado">
+
+                </div>
+                <div id="formCalculadora2" class="displaynone">
+                    <span class="perguntaCalculadora">Gostaria de entrar em contato?</span>
+                    <form action="https://formsubmit.co/guilherme.secchin@fintera.com.br" method="POST">
+                        <div class="respostaWrapper">
+                            <input id="nomeCalculadora" name="nomeCalculadora" class="resposta" placeholder="Nome"  type="text" autofocus value="Gui" required>
+                        </div>
+                        <div class="respostaWrapper">
+                            <input id="emailCalculadora" name="emailCalculadora" class="resposta" placeholder="E-mail"  type="email" value="gui@gui" required>
+                        </div>
+                        <div class="respostaWrapper">
+                            <input id="telCalculadora" name="telCalculadora" class="resposta" placeholder="Telefone" type="tel" value="(27)99911-8344" name="phone" pattern="([0-9]{2})[0-9]{4,5}-[0-9]{4}" required>
+                        </div>
+                        <div class="displaynone">
+                            <input id="resultado1" name="resultado1">
+                        </div>
+                        <div class="displaynone">
+                            <input id="resultado2" name="resultado2">
+                        </div>
+                        <div class="displaynone">
+                            <input id="resultado3" name="resultado3">
+                        </div>
+                        <button class="submitButtonCalculadora" type="submit" data-botao-end>OK</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script type="text/javascript" src="js/controllers/CalculadoraController.js"></script>
+<script type="text/javascript" src="js/models/ListaRespostaModel.js"></script>
+<script type="text/javascript" src="js/models/Pergunta1Model.js"></script>
+<script type="text/javascript" src="js/models/Pergunta2Model.js"></script>
+<script type="text/javascript" src="js/models/Pergunta3Model.js"></script>
+<script type="text/javascript" src="js/models/Pergunta4Model.js"></script>
+<script type="text/javascript" src="js/models/Pergunta5Model.js"></script>
+<script>
+
+    const $ = document.querySelector.bind(document);    
+    $('#startCalculadora').addEventListener('click', function(event){
+
+        limpaForm();
+
+        let formCalculadora1 = $('#formCalculadora1');
+        formCalculadora1.classList.remove("displaynone");
+
+        let calculadoraController = new CalculadoraController();
+
+        let botao1 = $("[data-botao1]");
+        botao1.addEventListener('click', event => calculadoraController.adiciona(event));
+
+        let botao2 = $("[data-botao2]");
+        botao2.addEventListener('click', event => calculadoraController.adiciona(event));
+
+        let botao3 = $("[data-botao3]");
+        botao3.addEventListener('click', event => calculadoraController.adiciona(event));
+
+        let botao4 = $("[data-botao4]");
+        botao4.addEventListener('click', event => calculadoraController.adiciona(event));
+
+        let botao5 = $("[data-botao5]");
+        botao5.addEventListener('click', event => calculadoraController.adiciona(event));
+
+        let botao6 = $("[data-botao-end]");
+        botao6.addEventListener('click', event => calculadoraController.adiciona(event));
+    });
+
+    function limpaForm() {
+
+        let form = $('#introCalculadora');
+        let parent = form.parentNode;
+        parent.removeChild(form);
+    }
+</script>
