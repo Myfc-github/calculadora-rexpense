@@ -129,11 +129,6 @@ class CalculadoraController{
 
 					this.listaResposta.adiciona(resp5);
 
-					console.log(this.listaResposta.resultados);
-					console.log(this.listaResposta.resultados[0]);
-					console.log(this.listaResposta.resultados[1]);
-					console.log(this.listaResposta.resultados[2]);
-
 					this._inputResulado1.value = `${this.listaResposta.resultados[0]}`;
 					this._inputResulado2.value = `${this.listaResposta.resultados[1]}`;
 					this._inputResulado3.value = `${this.listaResposta.resultados[2]}`;
