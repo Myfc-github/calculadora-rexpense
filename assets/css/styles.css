@@ -23,6 +23,9 @@
     line-height: 32px;
     font-weight: 600;
 }
+.form1Perguntas{
+    width: 100%;
+}
 .respostaWrapper{
     border-bottom: 1px solid #fff;
     max-width: 100%;
