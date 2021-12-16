@@ -178,24 +178,25 @@ class CalculadoraController{
 
 		let formCalculadora2 = $("#formCalculadora2");
 		formCalculadora2.classList.remove("displaynone");
+		this._resultado.classList.remove("displaynone");
 
 		this._resultado.innerHTML = `
 			<h3 class="h3Resultado">Veja como tempo é dinheiro!</h4>
 			<div class="resultadoWrapper">
 				<div class="resultadoContain">
-					<p>Custo por hora</p>
+					<p class="pResultadoL">Custo por hora</p>
 					<h2 class="h2Resultado">${this.listaResposta.resultados[0]}</h2>
 				</div>
-				<div class="resultadoContain">
-					<p>Tempo economizado</p>
+				<div class="resultadoContainM">
+					<p class="pResultado">Tempo economizado</p>
 					<h2 class="h2Resultado">${this.listaResposta.resultados[1]}</h2>
 				</div>
-				<div class="resultadoContain">
-					<p>Total economizado</p>
+				<div class="resultadoContainR">
+					<p class="pResultado">Total economizado</p>
 					<h2 class="h2Resultado">${this.listaResposta.resultados[2]}</h2>
 				</div>
 			</div>
-			<h3>Invista na automatização dos processos financeiros.</h3>
+			<h3 class="h3Resultado">Invista na automatização dos processos financeiros.</h3>
         `;
 	}
 };
