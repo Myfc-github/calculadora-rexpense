@@ -96,6 +96,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     color: #fff;
     align-items: center;
     text-align: center;
+    font-family: 'Open Sans', sans-serif !important;
 }
 .resultadoWrapper{
     display: -webkit-inline-box;
@@ -128,4 +129,5 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     color: #fff;
     align-items: center;
     text-align: center;
+    font-family: 'Open Sans', sans-serif !important;
 }

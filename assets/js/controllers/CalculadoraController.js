@@ -176,15 +176,14 @@ class CalculadoraController{
 
 	montaResultado() {
 
-		let formCalculadora2 = $("#formCalculadora2");
-		formCalculadora2.classList.remove("displaynone");
-		this._resultado.classList.remove("displaynone");
+		let resultadoContainer = $("#resultadoContainer");
+		resultadoContainer.classList.remove("displaynone");
 
 		this._resultado.innerHTML = `
 			<h3 class="h3Resultado">Veja como tempo é dinheiro!</h4>
 			<div class="resultadoWrapper">
-				<div class="resultadoContain">
-					<p class="pResultadoL">Custo por hora</p>
+				<div class="resultadoContainL">
+					<p class="pResultado">Custo por hora</p>
 					<h2 class="h2Resultado">${this.listaResposta.resultados[0]}</h2>
 				</div>
 				<div class="resultadoContainM">
