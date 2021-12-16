@@ -92,7 +92,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     padding: 15px 10px;
 }
 .h3Resultado{
-    margin-bottom: 69px;
+    margin: 70px 0;
     font-size: 30px;
     line-height: 32px;
     font-weight: 700;
