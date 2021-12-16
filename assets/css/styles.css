@@ -99,21 +99,35 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     font-family: 'Open Sans', sans-serif !important;
 }
 .resultadoWrapper{
-    display: -webkit-inline-box;
-    display: inline-flex;
     align-items: center;
     text-align: center;
 }
-.resultadoContainL{
-    margin-right: 35px;
+@media (min-width: 1440px){
+    .resultadoWrapper{
+        display: -webkit-inline-box;
+        display: inline-flex;
+    }
+    .resultadoContainL{
+        margin-right: 35px;
+    }
+    .resultadoContainM{
+        padding: 0 35px 0 35px;
+        border-left: 4px solid #96F7D2;
+        border-right: 4px solid #96F7D2;
+    }
+    .resultadoContainR{
+        margin-left: 35px;
+    }
 }
-.resultadoContainM{
-    padding: 0 35px 0 35px;
-    border-left: 4px solid #96F7D2;
-    border-right: 4px solid #96F7D2;
-}
-.resultadoContainR{
-    margin-left: 35px;
+@media (max-width: 1440px){
+    .resultadoContainL, .resultadoContainM{
+        margin-bottom: 35px;
+    }
+    .resultadoContainM{
+        padding: 35px 0 35px 0;
+        border-top: 4px solid #96F7D2;
+        border-bottom: 4px solid #96F7D2;
+    }
 }
 .pResultado{
     font-size: 25px;

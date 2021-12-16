@@ -69,7 +69,12 @@ class ListaRespostaModel{
 		let hora = parseInt(valor);
 		let minuto = (valor - hora) * 60;
 
-		return hora + ":" + parseInt(minuto);
-		
+		if (minuto == 0){
+
+			return hora;
+		} else {
+
+			return hora + ":" + parseInt(minuto);
+		}
 	}
 }
