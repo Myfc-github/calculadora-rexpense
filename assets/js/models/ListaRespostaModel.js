@@ -71,7 +71,7 @@ class ListaRespostaModel{
 
 		if (minuto == 0){
 
-			return hora;
+			return hora + "horas";
 		} else {
 
 			return hora + ":" + parseInt(minuto);

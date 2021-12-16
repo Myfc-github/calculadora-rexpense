@@ -120,7 +120,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 }
 @media (max-width: 1440px){
-    .resultadoContainL, .resultadoContainM{
+    .resultadoContainL, .resultadoContainM, .resultadoContainR{
         margin-bottom: 35px;
     }
     .resultadoContainM{
@@ -144,4 +144,5 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     align-items: center;
     text-align: center;
     font-family: 'Open Sans', sans-serif !important;
+    margin-bottom: 0;
 }
