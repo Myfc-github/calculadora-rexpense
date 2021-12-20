@@ -180,7 +180,7 @@ class CalculadoraController{
 		resultadoContainer.classList.remove("displaynone");
 
 		this._resultado.innerHTML = `
-			<h3 class="h3Resultado">Veja como tempo é dinheiro!</h4>
+			<h3 class="h3Resultado">Veja a economia mensal da sua empresa.</h4>
 			<div class="resultadoWrapper">
 				<div class="resultadoContainL">
 					<p class="pResultado">Custo por hora</p>
@@ -191,7 +191,7 @@ class CalculadoraController{
 					<h2 class="h2Resultado">${this.listaResposta.resultados[1]}</h2>
 				</div>
 				<div class="resultadoContainR">
-					<p class="pResultado">Total economizado</p>
+					<p class="pResultado">Total econimizado por mês</p>
 					<h2 class="h2Resultado">${this.listaResposta.resultados[2]}</h2>
 				</div>
 			</div>

@@ -38,7 +38,7 @@ class ListaRespostaModel{
 		this._resultados.push(this._preparaResultadoHora(_resultado2));
 
 		// Total economizado por mês
-		let _resultado3 = (((this._respostas[1] - _base2) * 280 * 24 * 30) + (this._respostas[2] - _base3) + (this._respostas[3] - _base4)) * this._respostas[0];
+		let _resultado3 = (((this._respostas[1] - _base2) * 280) + (this._respostas[2] - _base3) + (this._respostas[3] - _base4)) * this._respostas[0];
 		this._resultados.push(this._preparaResultadoMonetario(_resultado3));
 		
 	}
@@ -71,7 +71,7 @@ class ListaRespostaModel{
 
 		if (minuto == 0){
 
-			return hora + "horas";
+			return hora + " horas";
 		} else {
 
 			return hora + ":" + parseInt(minuto);
