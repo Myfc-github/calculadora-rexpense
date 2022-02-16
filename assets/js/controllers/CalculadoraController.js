@@ -191,7 +191,7 @@ class CalculadoraController{
 					<h2 class="h2Resultado">${this.listaResposta.resultados[1]}</h2>
 				</div>
 				<div class="resultadoContainR">
-					<p class="pResultado">Total econimizado por mês</p>
+					<p class="pResultado">Total economizado por mês</p>
 					<h2 class="h2Resultado">${this.listaResposta.resultados[2]}</h2>
 				</div>
 			</div>
